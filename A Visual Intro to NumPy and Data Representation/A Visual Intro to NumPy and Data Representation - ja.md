@@ -45,23 +45,23 @@ NumPy の配列の有用性を示すために、2 つの配列を作成してみ
 
 NumPy がこの操作を、各セルで乗算が起こることを意味すると理解したのがわかるだろうか？その考え方は**ブロードキャスト**と呼ばれ、とても便利なものです。
 
-## Indexing
+## インデックス作成
 
-- 翻訳中
+Python のリストをスライスするのと同じように、NumPy の配列をインデックスし、スライスすることができる。
 
 ![](https://jalammar.github.io/images/numpy/numpy-array-slice.png)
 
-## Aggregation
+## アグリゲーション
 
-- 翻訳中
+NumPy が与えてくれるその他の利点は、集約関数である。
 
 ![](https://jalammar.github.io/images/numpy/numpy-array-aggregation.png)
 
-- 翻訳中
+`min`、`max`、`sum`に加えて、平均を求める`mean`のような偉大なもの(集約関数)を手に入れることができます。`prod`は、すべての要素を掛け合わせた結果を得ることができます。`std`は、標準偏差を得られ、その他にもたくさんあります。
 
-## In more dimensions
+## より多くの次元で
 
-- 翻訳中
+これまで見てきた例では、すべて 1 次元のベクトルを扱っています。NumPy の美しさの主要な部分は、これまで見てきたすべてを任意の数の次元に適用できることである。
 
 ### Creating Matrices
 
