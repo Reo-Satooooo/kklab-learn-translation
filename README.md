@@ -9,3 +9,9 @@
 
 ## 翻訳元一覧
 - [A Visual Intro to NumPy and Data Representation](https://jalammar.github.io/visual-numpy/)
+
+## 翻訳作業手順参考文献
+- [GitHub管理された海外の技術ドキュメントの日本語翻訳サイトを作る際にやったこと](https://kahoo.blog/english-doc-site-translate-japanese-site-with-github-fork/)
+- [翻訳から始めるオープンソースコントリビューション](https://qiita.com/yhay81/items/3773ab2e001a9e39ccc8)
+- [A successful Git branching model を翻訳しました](http://keijinsonyaban.blogspot.com/2010/10/a-successful-git-branching-model.html)
+- [Markdown記法 サンプル集](https://qiita.com/tbpgr/items/989c6badefff69377da7)
