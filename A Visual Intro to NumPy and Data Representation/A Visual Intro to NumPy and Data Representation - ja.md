@@ -25,25 +25,25 @@ NumPy に配列の値を初期化してもらいたい場合がよくある。Nu
 
 配列の作成が完了したら、次はそれを使って、面白い方法で、操作ができるようになります。
 
-## Array Arithmetic
+## 配列の算術演算
 
-- 翻訳中
+NumPy の配列の有用性を示すために、2 つの配列を作成してみましょう。 `data`, `ones`と呼ぶことにする。
 
 ![](https://jalammar.github.io/images/numpy/numpy-arrays-example-1.png)
 
-- 翻訳中
+位置的に足し算する（各行の値を足す）には、`data + ones` と入力するだけでよい。
 
 ![](https://jalammar.github.io/images/numpy/numpy-arrays-adding-1.png)
 
-- 翻訳中
+このようなツールを学び始めたとき、このような抽象化によって、このような計算をループでプログラムする必要がないことが新鮮に感じられたのです。問題をより高いレベルで考えることができる、素晴らしい抽象化です。
 
 ![](https://jalammar.github.io/images/numpy/numpy-array-subtract-multiply-divide.png)
 
-- 翻訳中
+配列と一つの数値との演算を行いたい場合がよくある（これをベクトルとスカラとの演算と呼ぶこともある）。例えば、距離を表す配列がマイル単位で、それをキロメートルに変換したいとします。単純に`data * 1.6`と言うだけです。
 
 ![](https://jalammar.github.io/images/numpy/numpy-array-broadcast.png)
 
-- 翻訳中
+NumPy がこの操作を、各セルで乗算が起こることを意味すると理解したのがわかるだろうか？その考え方は**ブロードキャスト**と呼ばれ、とても便利なものです。
 
 ## Indexing
 
