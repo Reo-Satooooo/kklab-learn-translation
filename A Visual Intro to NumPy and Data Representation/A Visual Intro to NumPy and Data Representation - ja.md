@@ -97,19 +97,19 @@ np.array([[1,2],[3,4]])
 
 ![](https://jalammar.github.io/images/numpy/numpy-matrix-dot-product-2.png)
 
-### Matrix Indexing
+### マトリクスインデックス
 
-- 翻訳中
+インデックスやスライスの操作は、行列を操作するときに、さらに便利になります。
 
 ![](https://jalammar.github.io/images/numpy/numpy-matrix-indexing.png)
 
-### Matrix Aggregation
+### マトリクスアグリゲーション
 
-- 翻訳中
+ベクトルを集約するのと同じように、行列を集約することができる。
 
 ![](https://jalammar.github.io/images/numpy/numpy-matrix-aggregation-1.png)
 
-- 翻訳中
+行列のすべての値を集約できるだけでなく、axis パラメータを使用すれば、行や列をまたいで集約することも可能です。
 
 ![](https://jalammar.github.io/images/numpy/numpy-matrix-aggregation-4.png)
 
