@@ -63,9 +63,9 @@ NumPy が与えてくれるその他の利点は、集約関数である。
 
 これまで見てきた例では、すべて 1 次元のベクトルを扱っています。NumPy の美しさの主要な部分は、これまで見てきたすべてを任意の数の次元に適用できることである。
 
-### Creating Matrices
+### マトリックスの作成
 
-- 翻訳中
+Python リストを渡して、NumPy にそれを表す行列を作らせることができます。
 
 ```
 np.array([[1,2],[3,4]])
@@ -73,27 +73,27 @@ np.array([[1,2],[3,4]])
 
 ![](https://jalammar.github.io/images/numpy/numpy-array-create-2d.png)
 
-- 翻訳中
+また、上記で紹介した方法(`ones()`, `zeros()`, `random.random()`)と同じように、作成する行列の次元を表すタプルを与えればよい。
 
 ![](https://jalammar.github.io/images/numpy/numpy-matrix-ones-zeros-random.png)
 
-### Matrix Arithmetic
+### マトリックス算術
 
-- 翻訳中
+2 つの行列が同じ大きさであれば，算術演算子 (`+`, `-`, `\`, `*`, `/`) を用いて行列の加算や乗算を行うことができます。NumPy はこれらを位置演算として扱います。
 
 ![](https://jalammar.github.io/images/numpy/numpy-matrix-arithmetic.png)
 
-- 翻訳中
+異なるサイズの行列に対してこれらの算術演算を行うことができるのは、異なる次元が 1 つである場合に限られます。（行列が 1 列または 1 行しかない場合など）この場合、NumPy はその操作にブロードキャストルールを使用する。
 
 ![](https://jalammar.github.io/images/numpy/numpy-matrix-broadcast.png)
 
-### Dot Product
+### ドットプロダクト
 
-- 翻訳中
+算術との違いで重要なのは、ドットプロダクトを使った行列の掛け算の場合です。NumPy では、すべての行列に`dot()`メソッドが用意されており、他の行列との内積演算を行うことができます。
 
 ![](https://jalammar.github.io/images/numpy/numpy-matrix-dot-product-1.png)
 
-- 翻訳中
+この図の下に行列の寸法を書き加えているのは、2 つの行列が互いに向き合う側の寸法が同じでなければならないことを強調するためです。この操作は、次のように可視化できます。
 
 ![](https://jalammar.github.io/images/numpy/numpy-matrix-dot-product-2.png)
 
