@@ -54,7 +54,7 @@ Python のリストをスライスするのと同じように、NumPy の配列�
 
 ![](https://jalammar.github.io/images/numpy/numpy-array-slice.png)
 
-## アグリゲーション
+## 集約関数
 
 NumPy が与えてくれるその他の利点は、集約関数である。
 
