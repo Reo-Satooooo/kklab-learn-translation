@@ -100,13 +100,13 @@ np.array([[1,2],[3,4]])
 
 ![](https://jalammar.github.io/images/numpy/numpy-matrix-dot-product-2.png)
 
-### マトリクスインデックス
+### 行列のインデックス
 
 インデックスやスライスの操作は、行列を操作するときに、さらに便利になります。
 
 ![](https://jalammar.github.io/images/numpy/numpy-matrix-indexing.png)
 
-### マトリクスアグリゲーション
+### 行列の集約関数
 
 ベクトルを集約するのと同じように、行列を集約することができる。
 
