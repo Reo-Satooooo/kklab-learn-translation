@@ -170,31 +170,31 @@ array([[[1., 1.],
 
 ![](https://jalammar.github.io/images/numpy/numpy-mean-square-error-formula.png)
 
-- 翻訳中
+これの利点は、予測とラベルに1つまたは1000の値が含まれているかどうかをnumpyが気にしないことです（両方が同じサイズである限り）。そのコード行の4つの操作を順番に実行する例を見ていきます。（Google翻訳直張り）
 
 ![](https://jalammar.github.io/images/numpy/numpy-mse-1.png)
 
-- 翻訳中
+予測ベクトルとラベルベクトルの両方に3つの値が含まれています。つまり、nの値は3です。減算を実行すると、次のような値になります。（Google翻訳直張り）
 
 ![](https://jalammar.github.io/images/numpy/numpy-mse-2.png)
 
-- 翻訳中
+次に、ベクトルの値を2乗できます。（Google翻訳直張り）
 
 ![](https://jalammar.github.io/images/numpy/numpy-mse-3.png)
 
-- 翻訳中
+次に、これらの値を合計します。（Google翻訳直張り）
 
 ![](https://jalammar.github.io/images/numpy/numpy-mse-4.png)
 
-- 翻訳中
+これにより、その予測のエラー値とモデルの品質のスコアが得られます。（Google翻訳直張り）
 
-### Data Representation
+### データの表現
 
-- 翻訳中
+- モデルを作成して構築するために必要なすべてのデータタイプ（スプレッドシート、画像、オーディオなど）について考えてみてください。それらの多くは、n次元配列での表現に完全に適しています。（Google翻訳直張り）
 
-#### Tables and Spreadsheets
+#### テーブルとスプレッドシート
 
-- - 翻訳中
+- スプレッドシートまたは値の表は、2次元のマトリックスです。スプレッドシートの各シートは、独自の変数にすることができます。それらのPythonで最も人気のある抽象化は、実際にNumPyを使用し、その上に構築されるpandasデータフレームです。（Google翻訳直張り）
 
 ![](https://jalammar.github.io/images/pandas-intro/0%20excel-to-pandas.png)
 
