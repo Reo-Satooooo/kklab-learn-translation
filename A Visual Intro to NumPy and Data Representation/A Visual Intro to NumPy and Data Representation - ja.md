@@ -126,17 +126,17 @@ np.array([[1,2],[3,4]])
 
 ![](https://jalammar.github.io/images/numpy/numpy-reshape.png)
 
-## Yet More Dimensions
+## より多次元において
 
-- 翻訳中
+NumPyは、これまでに示してきたすべてのことをさまざまな次元で実行できます。このため、その中心的なデータ構造は、ndarray（N-Dimensional Array）と呼ばれます。
 
 ![](https://jalammar.github.io/images/numpy/numpy-3d-array.png)
 
-- 翻訳中
+多くの場合、新しい次元を扱う際は、NumPy関数のパラメーターにコンマを追加するだけです。
 
 ![](https://jalammar.github.io/images/numpy/numpy-3d-array-creation.png)
 
-- 翻訳中
+注：3次元のNumPy配列を印刷する場合、テキスト出力はここに示されているものとは異なる方法で配列を示すことに注意してください。NumPyがn次元配列を印刷する順序は、最後の軸が最も速くループし、最初の軸が最も遅くなることです。これは、`np.ones（（4,3,2））`が次のように出力されることを意味します。
 
 ```
 array([[[1., 1.],
