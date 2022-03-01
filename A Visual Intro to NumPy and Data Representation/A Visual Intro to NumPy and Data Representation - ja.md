@@ -154,17 +154,17 @@ array([[[1., 1.],
         [1., 1.]]])
 ```
 
-## Practical Usage
+## 実用的な使い方
 
-- 翻訳中
+- さて、見返りを受け取る時です。以下では、NumPyが役立つ便利な事柄の例を幾つか紹介します。
 
-### Formulas
+### 数式
 
-- 翻訳中
+- 行列やベクトルで機能する数式を実装する事は、NumPyの使用を検討する重要なユースケースです。NumPyが科学的なPythonコミュニティから気に入られているのはそのためです。例えば、回帰分析に取り組む教師有り学習モデルの中心である、平均二乗誤差の数式について考えてみましょう。
 
 ![](https://jalammar.github.io/images/numpy/mean-square-error-formula.png)
 
-- 翻訳中
+- これを実装する事は、NumPyにとっては容易い事です。
 
 ![](https://jalammar.github.io/images/numpy/numpy-mean-square-error-formula.png)
 
