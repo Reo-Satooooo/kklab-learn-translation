@@ -6,9 +6,9 @@
 ![](https://jalammar.github.io/images/numpy/numpy-array.png)
 
 
-[NumPy](https://www.numpy.org/)パッケージは、Python上で利用可能なデータ分析、機械学習、科学計算に用いるライブラリです。このライブラリは、ベクトルと行列の計算処理を大幅に簡素化します。いくつかのPythonの主要なパッケージは、計算基盤の基礎部分をNumPyに依存しています。（パッケージの例としてscikit-learn, SciPy, pandas, tensorflowがあります。）数値データを細かく分割する機能に加え、NumPyをマスターすることはこれらのライブラリを用いて高度な状況の処理やデバックをすることが可能になります。
+[NumPy](https://www.numpy.org/)パッケージは、Python上で利用可能なデータ分析、機械学習、科学計算に用いるライブラリです。このライブラリは、ベクトルと行列の計算処理を大幅に簡素化します。いくつかのPythonの主要なパッケージは、計算基盤の基礎部分を NumPy に依存しています。（パッケージの例としてscikit-learn, SciPy, pandas, tensorflowがあります。）数値データを細かく分割する機能に加え、NumPy をマスターすることはこれらのライブラリを用いて高度な状況の処理やデバックをすることが可能になります。
 
-この記事では、いくつかのNumPyの主な利用方法と、機械学習モデルに活用する前段階でさまざまな種類のデータ（表、画像、テキストなど）をどのように表現するかについて解説します。
+この記事では、いくつかの NumPy の主な利用方法と、機械学習モデルに活用する前段階でさまざまな種類のデータ（表、画像、テキストなど）をどのように表現するかについて解説します。
 
 ```
 import numpy as np
@@ -16,7 +16,7 @@ import numpy as np
 
 ## 配列の作成
 
-NumPy配列（通称：[ndarray](https://docs.scipy.org/doc/numpy/reference/arrays.ndarray.html)）を作成できます。
+NumPy配列（通称：[ndarray](https://docs.scipy.org/doc/numpy/reference/arrays.ndarray.html)）は `np.array()` を用いてPythonリストを渡すことで作成できます。この場合,Pythonは以下のように配列を作成します。
 
 ![](https://jalammar.github.io/images/numpy/create-numpy-array-1.png)
 
