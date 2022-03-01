@@ -116,13 +116,13 @@ np.array([[1,2],[3,4]])
 
 ![](https://jalammar.github.io/images/numpy/numpy-matrix-aggregation-4.png)
 
-## Transposing and Reshaping
+## 行と列の入れ替え
 
-- 翻訳中
+一般的に行列を扱う際に、行と列を入れ替える必要に迫られる場合があります。これは、2つの行列の内積を取り、それらが共有する次元を整列させる必要があるよくあるケースです。NumPy配列には、行列の転置を取得するためのTと呼ばれる便利な機能が用意されています。
 
 ![](https://jalammar.github.io/images/numpy/numpy-transpose.png)
 
-- 翻訳中
+より高度なユースケースとして、特定の行列の次元を切り替える必要がある場合があります。このような場合は、特定のモデルがデータセットとは異なる入力の特定の形状を期待する機械学習アプリケーションにおいてよくあります。NumPyの `reshape（）` メソッドは、このような場合に役立ちます。行列に必要な新しい次元を渡すだけです。次元に-1を渡すと、NumPyは行列に基づいて正しい次元を推測できます。
 
 ![](https://jalammar.github.io/images/numpy/numpy-reshape.png)
 
