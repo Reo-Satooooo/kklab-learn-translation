@@ -170,23 +170,23 @@ array([[[1., 1.],
 
 ![](https://jalammar.github.io/images/numpy/numpy-mean-square-error-formula.png)
 
-これの利点は、予測とラベルに1つまたは1000の値が含まれているかどうかをnumpyが気にしないことです（両方が同じサイズである限り）。そのコード行の4つの操作を順番に実行する例を見ていきます。（Google翻訳直張り）
+これの利点は、predictions と labels に値が1つ入っているのか1000入っているのかをnumpyが気にしない事です（両方が同じサイズである限り）。そのコードの行の4つの操作を順番に実行する例を見て行きます。
 
 ![](https://jalammar.github.io/images/numpy/numpy-mse-1.png)
 
-予測ベクトルとラベルベクトルの両方に3つの値が含まれています。つまり、nの値は3です。減算を実行すると、次のような値になります。（Google翻訳直張り）
+予測ベクトルとラベルベクトルの両方に3つの値が含まれています。つまり、nの値は3です。減算を実行すると、次のような値になります。
 
 ![](https://jalammar.github.io/images/numpy/numpy-mse-2.png)
 
-次に、ベクトルの値を2乗できます。（Google翻訳直張り）
+そして、ベクトルの値を2乗します。
 
 ![](https://jalammar.github.io/images/numpy/numpy-mse-3.png)
 
-次に、これらの値を合計します。（Google翻訳直張り）
+では、これらを合計します。
 
 ![](https://jalammar.github.io/images/numpy/numpy-mse-4.png)
 
-これにより、その予測のエラー値とモデルの品質のスコアが得られます。（Google翻訳直張り）
+結果、その予測のエラー値とモデルの品質のスコアを得られます。
 
 ### データの表現
 
