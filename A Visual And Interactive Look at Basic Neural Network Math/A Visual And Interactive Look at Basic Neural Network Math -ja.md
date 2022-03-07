@@ -44,33 +44,37 @@ The dataset we’ll use this time will be the Titanic passenger list from Kaggle
 
 入力ニューロンは（人の年齢などの）値の入力を行う部分です。そこから演算が始まります。外向きの矢印とその他の図は予測演算を行うために必要なその他の計算を示しています。
 
+***
+
 ![weighted neuron image](https://jalammar.github.io/images/weight.png)
 
-矢印上に重みがある場合、値が通過する際に重みが乗算されます。
+矢印上に重みの接点がある場合、値が通過する際に重みが乗算されます。
 
 ```
 connection_output = weight * connection_input
-接点の出力 = 重み * 接点の入力
+接点からの出力 = 重み * 接点への入力
 ```
+*** 
 
 ![ neuron image](https://jalammar.github.io/images/neuron.png)
 
 ニューロンに入力がある場合、それらは加算され、合計は外向き矢印の方向に出力されます。
 
 ```
-ノードの出力 = 入力_1 + 入力_2
+ノードからの出力 = 入力_1 + 入力_2
 node_output = input_1 + input_2
 ```
+***
 
-### Sigmoid [#](https://jalammar.github.io/feedforward-neural-networks-visual-interactive/#sigmoid)
+### シグモイド関数 [#](https://jalammar.github.io/feedforward-neural-networks-visual-interactive/#sigmoid)
 
 ![sigmoid neuron](https://jalammar.github.io/images/sigmoid-neuron.png)
 
-To turn the network’s calculation into a probability value between 0 and 1, we have to pass the value from the output layer through a “sigmoid” formula. Sigmoid squashes the output value of a neuron to between 0 and 1 according to a specific curve.
+ネットワークの演算を0から1の間の割合に変換し、出力層からの値を「シグモイド」式に渡します。シグモイド式はシグモイド曲線に従って0から1の間で出力値を置き換えます。
 
 f(x)= 11+e−x\\frac{1}{1 + e^{-x}}
 
-Where e is the mathematical constant approximately equal to 2.71828
+ここではeは2.71828にほぼ等しい数学定数とします。
 
 ```
 def sigmoid(x):
@@ -78,20 +82,25 @@ def sigmoid(x):
 
 output = sigmoid(value)
 ```
+***
 
-### Sigmoid Visualization [#](https://jalammar.github.io/feedforward-neural-networks-visual-interactive/#sigmoid-visualization)
+### シグモイド関数の図解 [#](https://jalammar.github.io/feedforward-neural-networks-visual-interactive/#sigmoid-visualization)
 
 <table><tbody><tr><td>0</td><td><img src="https://jalammar.github.io/images/sigmoid-neuron.png"></td><td>0.50000000000</td></tr></tbody></table>
 
-Interact a little with sigmoid to see how it transforms various values
+* [翻訳元](https://jalammar.github.io/feedforward-neural-networks-visual-interactive/#sigmoid)ではシグモイド式を動的に体験することができます。シグモイド式で値がどのように変化するか実際に動かしてみてください。
+
+(この辺はJSが動作する環境が必要なので無理に翻訳しない方が良さそう)
 
 f(0) = 11+e−x\\frac{1}{1 + e^{-x}} = 0.50000000000
 
 \-20\-15\-10\-5051015200.00.51.0Output0.50000000000
 
+***
+
 ![weighted neuron image](https://jalammar.github.io/images/two-input-one-output-sigmoid-network.png)
 
-To bring it all together, calculating a prediction with this shallow network looks like this:
+これらを用いたこの浅いネットワークで予測を計算すると以下のようになります:
 
 ```
 def sigmoid(x):
@@ -105,6 +114,8 @@ def calculate_prediction(age, sex, weight_1, weight_2, bias):
     prediction = sigmoid(layer_2_node)
     return prediction
 ```
+***
+ネットワークの構造を理解しました。ですので、\[勾配降下法\]を用いて891行のデータセットのうち最初の600行を使って学習を行います。
 
 Now that we know the structure of our network, we can train it using \[gradient descent\] running on the first 600 rows of the 891-row dataset. I will not be addressing the training process in this post because that’s a separate concern at the moment. For now, I just want you to be comfortable with how a trained network calculates a prediction. Once you get this intuition down, we’ll proceed to training in a future post.
 
