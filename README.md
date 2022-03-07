@@ -8,7 +8,11 @@
 3. 随時GitHubへpushする。
 
 ## 翻訳元一覧
-- [A Visual Intro to NumPy and Data Representation](https://jalammar.github.io/visual-numpy/)
+1. [A Visual Intro to NumPy and Data Representation](https://jalammar.github.io/visual-numpy/)
+2. [A Gentle Visual Intro to Data Analysis in Python Using Pandas](https://jalammar.github.io/gentle-visual-intro-to-data-analysis-python-pandas/)
+3. [Visualizing Pandas' Pivoting and Reshaping Functions](https://jalammar.github.io/visualizing-pandas-pivoting-and-reshaping/)
+4. [A Visual and Interactive Guide to the Basics of Neural Networks](https://jalammar.github.io/visual-interactive-guide-basics-neural-networks/)
+5. [A Visual And Interactive Look at Basic Neural Network Math](https://jalammar.github.io/feedforward-neural-networks-visual-interactive/)
 
 ## 翻訳作業手順参考文献
 - [GitHub管理された海外の技術ドキュメントの日本語翻訳サイトを作る際にやったこと](https://kahoo.blog/english-doc-site-translate-japanese-site-with-github-fork/)
