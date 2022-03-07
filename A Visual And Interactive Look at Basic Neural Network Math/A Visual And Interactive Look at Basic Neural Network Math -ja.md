@@ -1,14 +1,18 @@
-In the [previous post, we looked at the basic concepts of neural networks](https://jalammar.github.io/visual-interactive-guide-basics-neural-networks/). Let us now take another example as an excuse to guide us to explore some of the basic mathematical ideas involved in prediction with neural networks.
+# 図解で理解する基本のニューラルネットワーク数学
 
- Your browser does not support the video tag.
+[以前の記事では](https://jalammar.github.io/visual-interactive-guide-basics-neural-networks/)ニューラルネットワークの基本的な概念を解説しました。では、ニューラルネットワークを用いた予測の基礎となる数学的考え方を説明するためにいくつか別の例を見ていきましょう。
 
-If you had been aboard the Titanic, would you have survived the sinking event? Let’s build a model to predict one’s odds of survival.
+ [![some of the basic mathematical ideas involved in prediction with neural networks](https://jalammar.github.io/images/two-input-one-output-sigmoid-network.png)](https://jalammar.github.io/images/titanic_nn_calculation.mp4 "some of the basic mathematical ideas involved in prediction with neural networks")
+ - 上記画像には動画がリンクされています。
 
-This will be a neural network model building on what we discussed in the previous post, but will have a higher prediction accuracy because it utilizes hidden layers and activation functions.
+もしあなたがタイタニック号に乗船していて、沈没から生き延びるにはどうしたでしょうか？生存確率の予測モデルを立てたのではないでしょうか。
 
+これは[以前の記事](https://jalammar.github.io/visual-interactive-guide-basics-neural-networks/)で論じた内容に基づいて構築したニューラルネットワークモデルになります。ただし隠れた階層と活性化関数を利用するため、予測精度が高くなります。
+
+今回利用するデータセットはKaggleのタイタニック号の乗船客リストになります。リストには乗船客の氏名とその他の情報や乗船客が沈没からどのように生き延びたか、または生き延びることができなかったかについて示されています。
 The dataset we’ll use this time will be the Titanic passenger list from Kaggle. It lists the names and other information of the passengers and shows whether each passenger survived the sinking event or not.
 
-The raw dataset looks like this:
+実際のデータセットは以下のようになっています:
 
 | PassengerId | Survived | Pclass | Name | Sex | Age | SibSp | Parch | Ticket | Fare | Cabin | Embarked |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -16,7 +20,7 @@ The raw dataset looks like this:
 | 2 | 1 | 1 | Cumings, Mrs. John Bradley (Florence Briggs Th… | female | 38.0 | 1 | 0 | PC 17599 | 71.2833 | C85 | C |
 | 3 | 1 | 3 | Heikkinen, Miss. Laina | female | 26.0 | 0 | 0 | STON/O2. 3101282 | 7.9250 | NaN | S |
 
-We won’t bother with most of the columns for now. We’ll just use the sex and age columns as our features, and survival as our label that we’ll try to predict.
+現時点で大半の列については気にしないでください。特徴量として性別と年齢の列を利用し、生存を予測します。
 
 | Age | Sex | Survived? |
 | --- | --- | --- |
@@ -25,34 +29,36 @@ We won’t bother with most of the columns for now. We’ll just use the sex and
 | 26 | 1 | 1 |
 | … 891 rows total |
 
-We’ll attempt to build a network that predicts whether a passenger survived or not.
+乗船客が生き延びたかどうかについての予測をするネットワークを構築します。
 
-Neural networks need their inputs to be numeric. So we had to change the sex column – male is now 0, female is 1. You’ll notice the dataset already uses something similar for the survival column – survived is 1, did not survive is 0.
+ニューラルネットワークは入力に数値が必要です。ですので性別の列を男性は「0」、女性は「1」に変換します。お気づきかも知れませんが、同様に生存の列を生き延びたを「1」、生き延びなかったを「0」に変換します。
 
-The simplest neural network we can use to train to make this prediction looks like this:
+この予測を作成するための単純なニューラルネットワークは以下のようになります:
 
-![neural netowrk with two inputs, one output, and sigmoid output activation](https://jalammar.github.io/images/two-input-one-output-sigmoid-network.png) Calculating a prediction is done by plugging in a value for "age" and "sex". The calculation then flows from the left to the right. Before we can use this net for prediction, however, we'll have to run a "training" process that will give us the values for the weights (w) and bias (b).  
-Note: we have slightly adjusted the way we represent the networks from the previous post. The bias node specifically is more commonly represented like this
+![neural netowrk with two inputs, one output, and sigmoid output activation](https://jalammar.github.io/images/two-input-one-output-sigmoid-network.png)予測演算は「年齢」と「性別」の値を組み込むことでなされます。その演算は左から右へと行われます。ただし、予測にこのネットワークを使用する前に、値に重み（W）とバイアス（b）を与える「学習」プロセスを実行しなければなりません。
+注: 以前の記事からネットワークの表現を少し変更しました。詳しくはバイアスノードを以下のように以下のように置き換えました。
 
-Let’s recap the elements that make up this network and how they work:
+では、このネットワークを構成する要素とそれらがどのように機能するのかまとめてみましょう:
 
 ![input neuron](https://jalammar.github.io/images/input-neuron.png)
 
-An input neuron is where we plug in an input value (e.g. the age of a person). It’s where the calculation starts. The outgoing connection and the rest of the graph tell us what other calculations we need to do to calculate a prediction.
+入力ニューロンは（人の年齢などの）値の入力を行う部分です。そこから演算が始まります。外向きの矢印とその他の図は予測演算を行うために必要なその他の計算を示しています。
 
 ![weighted neuron image](https://jalammar.github.io/images/weight.png)
 
-If a connection has a weight, then the value is multiplied by that weight as it passes through it.
+矢印上に重みがある場合、値が通過する際に重みが乗算されます。
 
 ```
 connection_output = weight * connection_input
+接点の出力 = 重み * 接点の入力
 ```
 
 ![ neuron image](https://jalammar.github.io/images/neuron.png)
 
-If a neuron has inputs, it sums their value and sends that sum along its outgoing connection(s).
+ニューロンに入力がある場合、それらは加算され、合計は外向き矢印の方向に出力されます。
 
 ```
+ノードの出力 = 入力_1 + 入力_2
 node_output = input_1 + input_2
 ```
 

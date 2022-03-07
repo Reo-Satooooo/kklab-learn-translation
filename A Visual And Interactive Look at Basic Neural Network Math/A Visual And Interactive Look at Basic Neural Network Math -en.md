@@ -1,3 +1,5 @@
+# A Visual And Interactive Look at Basic Neural Network Math
+
 In the [previous post, we looked at the basic concepts of neural networks](https://jalammar.github.io/visual-interactive-guide-basics-neural-networks/). Let us now take another example as an excuse to guide us to explore some of the basic mathematical ideas involved in prediction with neural networks.
 
  Your browser does not support the video tag.
