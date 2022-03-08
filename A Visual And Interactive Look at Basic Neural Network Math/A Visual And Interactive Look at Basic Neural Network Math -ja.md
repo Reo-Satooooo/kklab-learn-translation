@@ -115,11 +115,9 @@ def calculate_prediction(age, sex, weight_1, weight_2, bias):
     return prediction
 ```
 ***
-ネットワークの構造を理解しました。ですので、\[勾配降下法\]を用いて891行のデータセットのうち最初の600行を使って学習を行います。
+ネットワークの構造を理解しました。ですので、\[勾配降下法\]を用いて891行のデータセットのうち最初の600行を使って学習を行います。今回の記事では学習の過程は重要ではないため解説を行いません。現時点では、予測の演算を行うネットワークに学習させる方法に慣れることに注力します。この手法に慣れた際に、今後の記事で学習の過程について解説します。
 
-Now that we know the structure of our network, we can train it using \[gradient descent\] running on the first 600 rows of the 891-row dataset. I will not be addressing the training process in this post because that’s a separate concern at the moment. For now, I just want you to be comfortable with how a trained network calculates a prediction. Once you get this intuition down, we’ll proceed to training in a future post.
-
-The training process gives us the following values (with an accuracy of 73.20%):
+この学習過程では（73.2%の精度で）以下の値が得られます:
 
 ```
 weight_1 =   -0.016852 # Associated with "Age"
@@ -127,11 +125,12 @@ weight_2 =   0.704039  # Associated with "Sex" (where male is 0, female is 1)
 bias =       -0.116309
 ```
 
-Intuitively, the weights indicate how much their associated property contribute to the prediction – odds of survival improve the younger a person is (since a larger age multiplied by the negative weight value gives a bigger negative number). They improve more if the person is female.
+端的に言うと、重みは関連するプロパティがどの程度予測の助けになるかを示しています。例えば（年齢が高くなる程負の値を乗算することになるため）生存率は若い程高い傾向になります。生存率はその人物が女性である場合はより良くなります。
 
-### Prediction Calculation [#](https://jalammar.github.io/feedforward-neural-networks-visual-interactive/#prediction-calculation)
+### 予測の演算 [#](https://jalammar.github.io/feedforward-neural-networks-visual-interactive/#prediction-calculation)
 
-The trained network now looks like this: (hover or click on values in the table to see their individual predictions)
+予測したネットワークでは以下のようになっています（実施に値の上をなぞる又はクリックするとここの予測値が示されます）:
+* [翻訳元](https://jalammar.github.io/feedforward-neural-networks-visual-interactive/#sigmoid)では予測したネットワークを動的に体験することができます。予測値がどのように変化するか実際に動かしてみてください。
 
 |  | Age | Sex | Survived |
 | --- | --- | --- | --- |
@@ -146,7 +145,9 @@ The trained network now looks like this: (hover or click on values in the table 
 
 SurvivedAgeSexBias\-0.01690.704\-0.1163σ
 
-An accuracy of 73.20% isn’t very impressive. This is a case that can benefit from adding a hidden layer. Hidden layers give the model more capacity to represent more sophisticated prediction functions that may do a better job ([Deep Learning ch.5 page 113](http://www.deeplearningbook.org/contents/ml.html)).
+（この辺はJSが動作する環境が必要なので無理に翻訳しない方が良さそう）
+
+73.2%の精度では、大きな印象（差異）はありません。これは隠れ層（中間層）を追加することで効果が現れるケースです。中間層は([Deep Learning ch.5 page 113](http://www.deeplearningbook.org/contents/ml.html))の様なより良い働きをする洗練された予測関数の提示に寄与します。
 
 ![weighted neuron with activation](https://jalammar.github.io/images/neuron_with_activation.png)
 
