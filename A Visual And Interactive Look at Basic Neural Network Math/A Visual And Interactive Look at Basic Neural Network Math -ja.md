@@ -151,7 +151,7 @@ SurvivedAgeSexBias\-0.01690.704\-0.1163σ
 
 ![weighted neuron with activation](https://jalammar.github.io/images/neuron_with_activation.png)
 
-It’s often useful to apply certain math functions to the weighted outputs. These are called “activation functions” because historically they translated the output of the neuron into either 1 (On/active) or 0 (Off).
+重みを付加した出力に特定の関数を適応すると有効な場合がしばしばあります。それらは出力ニューロンを1(オン/アクティブ)又は0(オフ)のいずれかに変換していることから「活性化関数」と呼ばれます。
 
 ```
 def activation_function(x):
@@ -162,13 +162,14 @@ weighted_sum = weight * (input_1 + input_2)
 output = activation_function(weighted_sum)
 ```
 
-Activation functions are vital for hidden layers. Without them, deep networks would be no better than a shallow linear network. Read the “Commonly used activation functions” section from [Neural Networks Part 1: Setting up the Architecture](https://cs231n.github.io/neural-networks-1/) for a look at various activation functions.
+活性化関数は中間層に不可欠です。活性化関数がない場合、ディープネットワークが浅い線形ネットワークより良いものにはなりません。さまざまな
+活性化関数について知りたい場合は「一般的に使用されるネットワーク」の[Neural Networks Part 1: Setting up the Architecture](https://cs231n.github.io/neural-networks-1/)のセッションをお読みください。
 
-### ReLU [#](https://jalammar.github.io/feedforward-neural-networks-visual-interactive/#relu)
+### ReLU関数 [#](https://jalammar.github.io/feedforward-neural-networks-visual-interactive/#relu)
 
 ![weighted neuron with activation](https://jalammar.github.io/images/relu.png)
 
-A leading choice for activation function is called ReLU. It returns 0 if its input is negative, returns the number itself otherwise. Very simple!
+よく選ばれる活性化関数にReLU関数と呼ばれるものがあります。これは入力が負の場合0を返し、それ以外は数値自体を返します。とてもシンプルです。
 
 f(x) = max(0, x)
 
@@ -184,16 +185,16 @@ def relu(x):
 output = relu(value)
 ```
 
-### ReLU Visualization [#](https://jalammar.github.io/feedforward-neural-networks-visual-interactive/#relu-visualization)
+### ReLUの図解 [#](https://jalammar.github.io/feedforward-neural-networks-visual-interactive/#relu-visualization)
 
 <table><tbody><tr><td>0</td><td><img src="https://jalammar.github.io/images/relu.png"></td><td>0</td></tr></tbody></table>
 
-Interact a little with relu to see how it transforms various values
+* [翻訳元](https://jalammar.github.io/feedforward-neural-networks-visual-interactive/#sigmoid)ではReLU関数を動的に体験することができます。ReLU関数で値がどのように変化するか実際に動かしてみてください。
 
 f(0) = max( 0, 0.00) = 0
 
 \-20\-15\-10\-50510152002468101214161820Output0
 
-## Closing
+## おわりに
 
-This post has been parked for more than a year. I had attempted to visualize a deeper network after this point, but that never materialized. I hope you enjoyed it. Let me know on [@JayAlammar on Twitter](https://twitter.com/JayAlammar) if you have any feedback.
+この記事は一年以上前に執筆しました。ディープネットワークについての図解を試みましたが、上手く表現できませんでした。お役に立てれば幸いです。何かフィードバックがある場合は[@JayAlammar on Twitter](https://twitter.com/JayAlammar)にご連絡ください。
