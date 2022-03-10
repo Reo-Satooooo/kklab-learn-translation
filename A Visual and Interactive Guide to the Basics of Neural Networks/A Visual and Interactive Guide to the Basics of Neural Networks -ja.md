@@ -1,3 +1,5 @@
+# 動かして理解するニューラルネットワークの基礎
+
 Discussions: [Hacker News (63 points, 8 comments)](https://news.ycombinator.com/item?id=13183171), [Reddit r/programming (312 points, 37 comments)](https://www.reddit.com/r/programming/comments/5igdix/a_visual_and_interactive_guide_to_the_basics_of/)  
 Translations: [French](https://rr0.org/people/a/AlammarJay/visual-interactive-guide-basics-neural-networks/index_fr.html), [Spanish](https://camporeale.github.io/guia-interactiva-visual-conceptos-basicos-redes-neuronales/)
 
