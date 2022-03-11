@@ -1,16 +1,19 @@
 # 動かして理解するニューラルネットワークの基礎
 
-Discussions: [Hacker News (63 points, 8 comments)](https://news.ycombinator.com/item?id=13183171), [Reddit r/programming (312 points, 37 comments)](https://www.reddit.com/r/programming/comments/5igdix/a_visual_and_interactive_guide_to_the_basics_of/)  
-Translations: [French](https://rr0.org/people/a/AlammarJay/visual-interactive-guide-basics-neural-networks/index_fr.html), [Spanish](https://camporeale.github.io/guia-interactiva-visual-conceptos-basicos-redes-neuronales/)
+編集についての議論: [Hacker News (63 points, 8 comments)](https://news.ycombinator.com/item?id=13183171), [Reddit r/programming (312 points, 37 comments)](https://www.reddit.com/r/programming/comments/5igdix/a_visual_and_interactive_guide_to_the_basics_of/)  
+翻訳一覧: [フランス語](https://rr0.org/people/a/AlammarJay/visual-interactive-guide-basics-neural-networks/index_fr.html), [スペイン語](https://camporeale.github.io/guia-interactiva-visual-conceptos-basicos-redes-neuronales/)
 
 ![](https://jalammar.github.io/images/NNs_2_variables.png)
 
-**Update**: Part 2 is now live: [A Visual And Interactive Look at Basic Neural Network Math](https://jalammar.github.io/feedforward-neural-networks-visual-interactive/)
+**アップデート情報**: パート2を公開しました: [A Visual And Interactive Look at Basic Neural Network Math](https://jalammar.github.io/feedforward-neural-networks-visual-interactive/)
 
-## Motivation
+## 動機付け（導入、はじめに）
+
+筆者は機械学習の専門家ではありません。私は現在学んでいる段階のソフトウェアエンジニアであり、AIに少し関心がある程度です。筆者は機械学習について詳しくなりたいといつも思っていましたが、その確信に迫ることができませんでした。そのため、Googleが2015年11月にTensorFlowのオープンソースを公開したとき、筆者はとても興奮し、学習を始めるときが来たのだと考えました。ドラマチックなことではないかもしれませんが、私にとってはプロメテウスが機械学習のオリンポス火山から火を放ち人間に与えたように感じられました（ギリシャ神話においてプロメテウスが神の世界から、ゼウスの許可なく人間に火を与えた言い伝えを比喩として使っている）。私の頭の中ではGoogleの研究者がMapReduceの論文を公開した際にビックデータやHadoopのような技術分野全体がとてつもない進歩を遂げた時のような感じがありました。今回は論文ではなく、年々進化してきた上で実際に利用可能なソフトウェアを扱います。
 
 I’m not a machine learning expert. I’m a software engineer by training and I’ve had little interaction with AI. I had always wanted to delve deeper into machine learning, but never really found my “in”. That’s why when Google open sourced TensorFlow in November 2015, I got super excited and knew it was time to jump in and start the learning journey. Not to sound dramatic, but to me, it actually felt kind of like Prometheus handing down fire to mankind from the Mount Olympus of machine learning. In the back of my head was the idea that the entire field of Big Data and technologies like Hadoop were vastly accelerated when Google researchers released their Map Reduce paper. This time it’s not a paper – it’s the actual software they use internally after years and years of evolution.
 
+私がこの話題の基本について学習を始めた際
 So I started learning what I can about the basics of the topic, and saw the need for gentler resources for people with no experience in the field. This is my attempt at that.
 
 ## Start here
